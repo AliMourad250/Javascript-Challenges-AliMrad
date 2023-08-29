@@ -3,6 +3,8 @@ let name;
 name = "Ali";
 alert(name);
 
+console.log("----------------");
+
 let age = 21;
 var lastName = "Mrad";
 const DOB = "07/07/2002";
@@ -10,6 +12,9 @@ const DOB = "07/07/2002";
 
 
 console.log(age + ", " + lastName + ", " + DOB);
+
+console.log("----------------");
+
 console.log(typeof ("this is a text"));
 console.log(typeof (true));
 console.log(typeof (false));
@@ -36,3 +41,27 @@ console.log(v3 + ": " + typeof (v3));
 console.log(v4 + ": " + typeof (v4));
 console.log(v5 + ": " + typeof (v5));
 console.log(v6 + ": " + typeof (v6));
+
+console.log("----------------");
+
+const nb = 2;
+let myText = "This is my text!",
+    myText2 = 'This is my ${nb}nd text!',
+    mytext3 = `This is my ${nb + 1}rd text!`;
+
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote =
+    'This is my text using single quotations ${counter} times';
+const doubleQuote =
+    'This is my text using double quotations ${counter} times';
+const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
+
+console.log(counter);
+console.log(backtick);
+console.log(singleQuote);
+console.log(doubleQuote);
+console.log(tryThisAlso);
+console.log("Explanation: \nIn the 4 declaration above," +
+    "\nwe intended to use the interpolation in each way of string declaration," +
+    "\nbut as we noticed, it only worked with the backticks \`\` when we tried to log the variable \"counter\"\'s value, \nand it also worked when we tried putting an addition operation inside the interpolation.")
