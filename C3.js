@@ -34,4 +34,17 @@ console.log("compute(10, 2, \"subtract\"): " + compute(10, 2, "subtract"))
 
 console.log("----------------");
 
+const squareNumber = (number) => {
+    // const localVar = 7;
+    return number * number;
+};
+console.log("squareNumber(3): " + squareNumber(3));
+
+let globalVar = 5;
+console.log("squareNumber(globalVar): " + squareNumber(globalVar));
+
+// console.log("localVar= " + localVar);
+
+console.log("----------------");
+
 
