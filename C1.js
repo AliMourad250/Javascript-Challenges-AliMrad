@@ -93,3 +93,16 @@ console.log(2 < "2");
 console.log("2" < "2");
 console.log(2 <= "2");
 console.log("2" <= "2");
+
+console.log("----------------");
+
+const result0 = 5 + 3 * 2; // 11
+console.log(result0);
+
+const result1 = 10 / 2 + 3; // 8
+console.log(result1);
+
+const result2 = 10 / (2 + 3); // 2
+// here the difference is that we used the () which is highest in terms of priority.
+console.log(result2);
+
