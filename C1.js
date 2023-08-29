@@ -1,7 +1,7 @@
 console.log('I am linked now!!');
 let name;
 name = "Ali";
-alert(name);
+// alert(name);
 
 console.log("----------------");
 
@@ -64,4 +64,32 @@ console.log(doubleQuote);
 console.log(tryThisAlso);
 console.log("Explanation: \nIn the 4 declaration above," +
     "\nwe intended to use the interpolation in each way of string declaration," +
-    "\nbut as we noticed, it only worked with the backticks \`\` when we tried to log the variable \"counter\"\'s value, \nand it also worked when we tried putting an addition operation inside the interpolation.")
+    "\nbut as we noticed, it only worked with the backticks \`\` when we tried to log the variable \"counter\"\'s value, \nand it also worked when we tried putting an addition operation inside the interpolation.");
+
+console.log("----------------");
+
+const part1 = "I lo", part2 = "ve coding!";
+const result = part1 + part2;
+console.log(result);
+
+console.log("----------------");
+
+console.log(2 === "2");
+console.log("2" === "2");
+console.log(2 !== "2");
+console.log("2" !== "2");
+console.log(2 == "2");
+console.log("2" == "2");
+console.log(2 != "2");
+console.log("2" != "2");
+
+console.log("")
+
+console.log(2 > "2");
+console.log("2" > "2");
+console.log(2 >= "2");
+console.log("2" >= "2");
+console.log(2 < "2");
+console.log("2" < "2");
+console.log(2 <= "2");
+console.log("2" <= "2");
