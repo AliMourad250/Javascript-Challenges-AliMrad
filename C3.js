@@ -85,3 +85,21 @@ for (let i = 0; i < favFruits.length; i++) {
 
 console.log("----------------");
 
+function doubler(num) {
+    return num = num * 2;
+}
+
+function processArray(nums, fn) {
+    return nums.map((num) => Number(fn(num)));
+}
+
+console.log("processArray([1, 2, 3, 4], doubler): " + processArray([1, 2, 3, 4], doubler));
+
+
+function multiplier(num1) {
+    return function (num2) {
+        return num1 * num2;
+    }
+}
+
+console.log(multiplier(2)(5));
