@@ -47,4 +47,41 @@ console.log("squareNumber(globalVar): " + squareNumber(globalVar));
 
 console.log("----------------");
 
+console.log("for loop: ");
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+console.log("");
+
+console.log("while loop: ")
+
+let i = 10;
+while (i >= 1) {
+    console.log(i);
+    i--;
+}
+
+console.log("");
+
+console.log("do-while loop: ")
+
+let j = 1;
+do {
+    if (j % 2 === 0)
+        console.log(j);
+    j++;
+} while (j <= 10);
+
+console.log("");
+
+let favFruits = ["apple", "orange", "banana", "peach"];
+
+for (let i = 0; i < favFruits.length; i++) {
+    if (favFruits[i].length > 5)
+        console.log(favFruits[i]);
+};
+
+console.log("----------------");
 
