@@ -13,5 +13,12 @@ console.log(allNumbers);
 
 console.log("----------------");
 
+let [firstNum, secondNum, thirdNum] = fiveNumbers;
+console.log(firstNum + " " + secondNum + " " + thirdNum);
 
+let { name, location, nationality } = personalInfo;
+
+console.log(name + " " + location + " " + nationality);
+
+console.log("----------------");
 
