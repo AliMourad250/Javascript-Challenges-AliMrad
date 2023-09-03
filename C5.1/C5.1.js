@@ -25,6 +25,7 @@ header1.innerText = "Hello World!";
 header1.style.border = "10px dotted green"
 
 document.body.appendChild(header1);
+let isVisible = true;
 document.addEventListener('keydown', (event) => {
     console.log("Key pressed:", event.key);
     switch (event.key) {
@@ -47,19 +48,24 @@ document.addEventListener('keydown', (event) => {
 
         case 'W':
         case 'w':
-            if (header1.style.visibility = "visible") {
+            if (isVisible) {
                 header1.style.visibility = "hidden";
             }
-            else if (header1.style.visibility = "hidden") {
+            else {
                 header1.style.visibility = "visible";
             }
+            isVisible = !isVisible;
             break;
 
         case ' ':
             header1.style.fontSize = "80px";
             break;
     }
+
 })
+function toggle() {
+
+}
 
 // ---------------------------------------------
 

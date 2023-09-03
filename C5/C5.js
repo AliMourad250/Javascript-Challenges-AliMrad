@@ -89,5 +89,33 @@ document.body.appendChild(form);
 
 // ---------------------------------------------
 
+let originalDiv = document.getElementById('original');
 
+let clonedDiv = originalDiv.cloneNode(true);
+let clonedParagraph = clonedDiv.querySelector('p');
+clonedParagraph.innerText = "Cloned";
 
+document.body.appendChild(clonedDiv);
+
+let isVisible = true;
+
+let cloneBtn = document.getElementById('clone-btn');
+cloneBtn.addEventListener('click', toggleDisplay);
+
+function toggleDisplay() {
+    if (isVisible) {
+        clonedDiv.style.display = 'none';
+    }
+    else {
+        clonedDiv.style.display = 'block';
+    }
+    isVisible = !isVisible;
+}
+
+let removeBtn = document.createElement('button');
+removeBtn.innerText = "Click to remove header";
+document.body.appendChild(removeBtn);
+
+removeBtn.addEventListener('click', () => {
+    header.parentNode.removeChild(header);
+})
