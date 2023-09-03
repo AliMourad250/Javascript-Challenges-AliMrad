@@ -1,99 +1,42 @@
-const button = document.createElement('button')
-button.innerHTML = "Click Me";
-button.style.cssText = `
-padding: 10px 20px;
-font-size: 16px;
-background-color: #3498db;
-color: #ffffff;
-border: none;
-cursor: pointer;
-`
+let header = document.querySelector('header');
+let footer = document.querySelector('footer');
+let menu = document.querySelector('.menu');
 
-document.body.appendChild(button);
 
-button.addEventListener('click', () => {
-    button.style.backgroundColor = "red";
-    button.style.color = "white";
-    const randomNumber = Math.round(Math.random() * 1000);
-    button.innerHTML = `Clicked ${randomNumber}!`
-})
-
-// ---------------------------------------------
-
-let header1 = document.createElement('h1');
-header1.innerText = "Hello World!";
-header1.style.border = "10px dotted green"
-
-document.body.appendChild(header1);
-document.addEventListener('keydown', (event) => {
-    console.log("Key pressed:", event.key);
-    switch (event.key) {
-        case 'A':
-        case 'a':
-            header1.style.backgroundColor = "red";
-            break;
-
-        case 'S':
-        case 's':
-            header1.style.marginLeft = "10px";
-            break;
-
-        case 'D':
-        case 'd':
-            let par = document.createElement('p');
-            par.innerText = `Key D was pressed!`;
-            document.body.appendChild(par);
-            break;
-
-        case 'W':
-        case 'w':
-            if (header1.style.visibility = "visible") {
-                header1.style.visibility = "hidden";
-            }
-            else if (header1.style.visibility = "hidden") {
-                header1.style.visibility = "visible";
-            }
-            break;
-
-        case ' ':
-            header1.style.fontSize = "80px";
-            break;
-    }
-})
-
-// ---------------------------------------------
-
-const name = document.getElementById('name'),
-    email = document.getElementById('email'),
-    password = document.getElementById('password'),
-    confPassword = document.getElementById('confPassword'),
-    submit = document.getElementById('submit');
-
-submit.addEventListener('click', (event) => {
-    event.preventDefault();
-    submitForm();
-})
-
-function submitForm() {
-
-    if (ValidateEmail(email) && (password.value === confPassword.value)) {
-        alert("Form successfully submitted!");
-    } else if (!ValidateEmail(email)) {
-        alert("You have entered an invalid email address!");
-    }
-    else if (password.value != confPassword.value) {
-        alert(`The passwords do not match`);
-    }
-
+for (let child of header.children) {
+    console.log(child)
 }
 
-function ValidateEmail(inputText) {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (inputText.value.match(mailformat)) {
-        return true;
-    }
-    else {
-        return false;
-    }
+for (let child of footer.children) {
+    console.log(child)
 }
 
+for (let child of menu.children) {
+    console.log(child)
+}
+
+let container = document.createElement('div')
+container.className = "container";
+
+let containerParagraph = document.createElement('p');
+containerParagraph.innerText = "Hello, World!";
+container.appendChild(containerParagraph);
+document.body.appendChild(container);
+
+container.style.cssText = `
+background-color: blue;
+color: white
+`;
+
+
+containerParagraph.style.cssText = `
+font-size: 24px;
+font-family: Helvetica;
+border: 1px solid black;
+`;
+
+let h1s = document.querySelectorAll('h1');
+
+for (let h1 of h1s) {
+    h1.style.fontStyle = "italic";
+}
