@@ -56,10 +56,44 @@ document.addEventListener('keydown', (event) => {
             break;
 
         case ' ':
-            header1.style.fontSize="80px";
+            header1.style.fontSize = "80px";
             break;
     }
 })
 
 // ---------------------------------------------
+
+const name = document.getElementById('name'),
+    email = document.getElementById('email'),
+    password = document.getElementById('password'),
+    confPassword = document.getElementById('confPassword'),
+    submit = document.getElementById('submit');
+
+submit.addEventListener('click', (event) => {
+    event.preventDefault();
+    submitForm();
+})
+
+function submitForm() {
+
+    if (ValidateEmail(email) && (password.value === confPassword.value)) {
+        alert("Form successfully submitted!");
+    } else if (!ValidateEmail(email)) {
+        alert("You have entered an invalid email address!");
+    }
+    else if (password.value != confPassword.value) {
+        alert(`The passwords do not match`);
+    }
+
+}
+
+function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
