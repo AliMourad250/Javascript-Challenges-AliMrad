@@ -53,3 +53,35 @@ async function factFetcher() {
     }
 }
 factFetcher();
+
+// ---------------------------------------------
+
+const urlArr = [
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random"
+]
+
+async function dogImgFetcher(url) {
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch data");
+    }
+    const data = response.json();
+    return data;
+
+}
+
+Promise.all(urlArr.map(dogImgFetcher))
+    .then((results) => {
+        console.log("Images: ")
+        results.forEach((data, index) => {
+            console.log(`Image ${index + 1}: ${data.message}`);
+        });
+    })
+    .catch((error) => {
+        console.error("An error occured: ", error);
+    })
