@@ -18,6 +18,8 @@ delay(2000)
 
 console.log('Finished!')
 
+// ---------------------------------------------
+
 fetch("https://uselessfacts.jsph.pl/random.json?language=en")
     .then((response) => {
         if (!response.ok) {
@@ -32,6 +34,7 @@ fetch("https://uselessfacts.jsph.pl/random.json?language=en")
         console.error("An error occured: ", error);
     })
 
+// ---------------------------------------------
 
 async function factFetcher() {
     try {
